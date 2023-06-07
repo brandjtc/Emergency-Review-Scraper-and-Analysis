@@ -1,0 +1,74 @@
+{
+  "Dimensions": [
+    {
+      "Dimension": "Transparent Interaction",
+      "Definition": "Describes how users can easily access and interact with the app without any obstacles.",
+      "Sub-Dimensions": [
+        {
+          "Sub-Dimension": "Activation",
+          "Definition": "The app's ability to quickly alert users when they receive an emergency notification. Fast response, immediate timing. Focus on timeliness."
+        },
+        {
+          "Sub-Dimension": "Saliency",
+          "Definition": "The app's ability to alert users based on the type and severity of the emergency. Important alerts. Loud warnings"
+        },
+        {
+          "Sub-Dimension": "Usability",
+          "Definition": "The app's ease of use, including quick response time and accessibility. Fast, easy, simple, affordable, many features, very useful"
+        },
+        {
+          "Sub-Dimension": "Deep Trust",
+          "Definition": "Users' confidence in the app's underlying structure, such as its codebase, ensuring no privacy violations or tracking."
+        }
+      ]
+    },
+    {
+      "Dimension": "Representational Fidelity",
+      "Definition": "The extent to which notifications accurately represent emergencies to users.",
+      "Sub-Dimensions": [
+        {
+          "Sub-Dimension": "Currency",
+          "Definition": "Providing users with up-to-date information about emergencies and the actions to take. Very relevant and immediate information. Fast updates. Valuable data"
+        },
+        {
+          "Sub-Dimension": "Completeness",
+          "Definition": "Ensuring users have a comprehensive representation of emergencies and the necessary counteractions. Usually has lots of information available"
+        },
+        {
+          "Sub-Dimension": "Exactitude",
+          "Definition": "Delivering correct and precise information about emergencies and the corresponding actions to take. Live Maps, information, knowledge, forecasts"
+        },
+        {
+          "Sub-Dimension": "Consistency",
+          "Definition": "Maintaining coherence in the representations of emergencies and the recommended counteractions. Easy to understand."
+        },
+        {
+          "Sub-Dimension": "Relevance",
+          "Definition": "Providing users with representations of non-trivial emergencies that pose immediate threats. Valid alerts. Life saving."
+        },
+        {
+          "Sub-Dimension": "Representational Trust",
+          "Definition": "Building users' confidence in the accuracy of representations and the effectiveness of the suggested counteractions."
+        }
+      ]
+    },
+    {
+      "Dimension": "Situational Awareness",
+      "Definition": "The extent to which information in the alert message enables users to take effective actions.",
+      "Sub-Dimensions": [
+        {
+          "Sub-Dimension": "Promptness",
+          "Definition": "Enabling users to quickly take protective actions based on the provided information."
+        },
+        {
+          "Sub-Dimension": "Actionability",
+          "Definition": "Offering users actionable recommendations to respond to emergencies in their environment."
+        },
+        {
+          "Sub-Dimension": "Situational Trust",
+          "Definition": "Instilling in users the belief that they can effectively carry out projected actions by relying on the information from the emergency notification."
+        }
+      ]
+    }
+  ]
+}

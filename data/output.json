@@ -1,0 +1,762 @@
+[
+    {
+        "Review": "Good, but there is some issues when I was gonna put the river Of mine place it shown the same river name but in Sacramento would really suggest to allow to put the city the state like UK OR CA zip code and then the name of your river Because it put the location in Sacramento not the river I mean. So fix the problem",
+        "Sentiment": "negative",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 59,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 59
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 61
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 57
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 60
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 53,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 53
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 57
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 54
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 54
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 49
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 53
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 54,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 55
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 39
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 69
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Review": "Been using this for years.Great app showing up to date info on river levels pretty much everywhere. A must have app",
+        "Sentiment": "positive",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 58,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 60
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 57
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 59
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 56
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 56,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 62
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 66
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 56
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 50
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 52
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 47
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 58,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 57
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 49
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 67
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Review": "Very useful app in my opinion! It has access to a lot of valuable centralized data about flooding that you can't find anywhere else. It is a must especially if you live in affected zones!",
+        "Sentiment": "positive",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 65,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 66
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 64
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 69
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 61
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 63,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 72
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 73
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 63
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 59
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 60
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 50
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 62,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 59
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 56
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 72
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Review": "Does not send verification to phone number supplied, to get notified by sms.",
+        "Sentiment": "negative",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 52,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 60
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 52
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 46
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 48
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 50,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 53
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 55
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 52
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 44
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 51
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 44
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 51,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 50
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 46
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 58
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Review": "I use this app to warn me when river levels are threatening the safety of my dinghy, kept in a ( hopefully) dry boathouse beside the river. I am about 20 miles away so it's wonderful to have detailed information to hand. It means I don't have to keep making unnecessary journeys to check",
+        "Sentiment": "positive",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 62,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 62
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 63
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 62
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 59
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 58,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 62
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 63
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 60
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 56
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 56
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 48
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 59,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 57
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 49
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 71
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Review": "I'm in. I made the yearly purchase. Keep working on it. Im looking for more user features. One that comes to mind as we head into I nice moderate flood is I wish I had a sooner warning from the app. POTENTIAL USERS: IT DEFINITELY WILL WARN YOU WHEN THE TIDE REACHES THE FLOOD THRESHOLD YOU THE USER SETS! Thanks for making this app!!!",
+        "Sentiment": "positive",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 64,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 68
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 65
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 63
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 61
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 57,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 61
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 62
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 57
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 55
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 54
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 51
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 59,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 58
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 48
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 72
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Review": "Good app,I recommend \u00f0\u0178\u2018\u0152.",
+        "Sentiment": "positive",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 34,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 34
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 32
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 40
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 30
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 35,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 36
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 38
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 28
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 45
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 31
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 31
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 32,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 30
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 35
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 32
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Review": "Great app. Live in Upton and keeps me updated during possible floods.",
+        "Sentiment": "positive",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 52,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 51
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 52
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 55
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 50
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 50,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 53
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 54
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 57
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 50
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 47
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 42
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 48,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 47
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 38
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 58
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Review": "A brilliant app for.keepimg an eye on local river levels.",
+        "Sentiment": "positive",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 45,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 53
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 48
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 45
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 33
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 39,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 47
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 41
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 39
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 38
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 38
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 33
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 42,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 42
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 37
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 46
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Review": "Thanks for the reply. I have checked and other apps are also not working",
+        "Sentiment": "negative",
+        "Dimensions": [
+            {
+                "Dimension": "Transparent Interaction",
+                "Score": 58,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Activation",
+                        "Score": 58
+                    },
+                    {
+                        "Sub-Dimension": "Saliency",
+                        "Score": 54
+                    },
+                    {
+                        "Sub-Dimension": "Usability",
+                        "Score": 61
+                    },
+                    {
+                        "Sub-Dimension": "Deep Trust",
+                        "Score": 57
+                    }
+                ]
+            },
+            {
+                "Dimension": "Representational Fidelity",
+                "Score": 52,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Currency",
+                        "Score": 57
+                    },
+                    {
+                        "Sub-Dimension": "Completeness",
+                        "Score": 63
+                    },
+                    {
+                        "Sub-Dimension": "Exactitude",
+                        "Score": 49
+                    },
+                    {
+                        "Sub-Dimension": "Consistency",
+                        "Score": 48
+                    },
+                    {
+                        "Sub-Dimension": "Relevance",
+                        "Score": 52
+                    },
+                    {
+                        "Sub-Dimension": "Representational Trust",
+                        "Score": 45
+                    }
+                ]
+            },
+            {
+                "Dimension": "Situational Awareness",
+                "Score": 56,
+                "Sub-Dimensions": [
+                    {
+                        "Sub-Dimension": "Promptness",
+                        "Score": 57
+                    },
+                    {
+                        "Sub-Dimension": "Actionability",
+                        "Score": 45
+                    },
+                    {
+                        "Sub-Dimension": "Situational Trust",
+                        "Score": 67
+                    }
+                ]
+            }
+        ]
+    }
+]
