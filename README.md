@@ -10,7 +10,7 @@ A python program that uses libraries to scrape reviews off of IOS apps and then 
 - **guides:** Contains guides for getting started with setting up a MongoDB connection to store app reviews.
 
 ### This github repository is a joined effort between Brandon Catalano, who managed the IOS app store integration and data visualization primarily, Anthony Parra, responsible for the Google Play Store integration, and Dr. Bonaretti, the project lead, at Nova Southeastern University.
-### It contains several scripts and guides for scraping and storing google and IOS application reviews in Python, processing and analyzing data stored within a MongoDB database, and generating sentiment analysis using AI models.   
+### It contains several scripts for scraping and storing google and IOS application reviews in Python, processing and analyzing data stored within a MongoDB database, and generating sentiment analysis using AI models.   
 &nbsp; 
 
 ## Repository Table of Contents 
