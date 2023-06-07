@@ -1,4 +1,4 @@
-# IOS-App-Store-Scraper
+# Emergency-Review-Scraper-and-Analysis
 A python program that uses libraries to scrape reviews off of IOS apps and then publish them to a MongoDB database.
 &nbsp;
 &nbsp;
