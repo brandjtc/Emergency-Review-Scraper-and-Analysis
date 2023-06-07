@@ -5,7 +5,7 @@ To make the IOS scraper run, the following libraries installations are necessary
 ```
 
 Now that the required libraries are installed, we can improt them into our python file.
-```
+```python
 import pandas as pd
 from pymongo import MongoCLient
 ```
