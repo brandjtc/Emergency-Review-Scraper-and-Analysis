@@ -14,6 +14,8 @@ from app_store_scraper import AppStore
 ```
 
 Next, constant variables should be set. REVIEWBATCHCOUNT sets how many reviews should be gathered from each app, to the nearest multiple of 20. E.G., 1 gives 20 reviews and 38 gives 40 reviews. Setting this value to -1 will give all reviews for an app.
+
+Sleep time range tells the review scraper how long it should wait between reviews to scrape more. Currently, it waits 1-2 seconds between batches using a range of 1-2.
 ```python
 REVIEWBATCHCOUNT=-1
 SLEEP_TIME_RANGE = (1, 2)
