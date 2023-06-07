@@ -10,4 +10,4 @@ import pandas as pd
 from pymongo import MongoCLient
 ```
 
-You can
+You can connect to MongoDB by either using the [MongoDB Vs Code Extension](https://www.mongodb.com/docs/atlas/mongodb-for-vscode/#std-label-mongodb-for-vscode)
