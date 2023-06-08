@@ -57,7 +57,7 @@ def process_review(review):
                 print(f"Language detection error occurred: {e}")
 
 def lang_detector_android():
-    reviews = list(collection.find())
+    reviews = list(review_collection.find())
     
     for review in reviews:
         process_review(review)
