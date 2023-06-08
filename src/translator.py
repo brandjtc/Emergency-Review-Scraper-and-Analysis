@@ -18,6 +18,11 @@ def translateToEng(string):
 
 def langDetectorIOS(tempAppList):
     i=0
+    try:
+        j=tempAppList[i]==1
+    except IndexError:
+        return "Break"
+
     while tempAppList[i]==None:
         i+=1
     return translation.detect(tempAppList[i]["review"]).lang
@@ -29,12 +34,15 @@ def langDetectorAndroid():
         content = review.get('content')
         translated = review.get('translated')  # Get the 'translated' field
         if content:
-            if translated is None:
-                # Create the 'translated' field if it doesn't exist in the document
+            if translated is None and review.get('translated_content') is None:
+                # Create the 'translated' and 'translated_content' field if it doesn't exist in the document
                 translated = False
                 review_collection.update_one(
                     {"_id": review['_id']},
-                    {"$set": {"translated": translated}}
+                    {"$set": {
+                        "translated": translated,
+                        "translated_content": "None"
+                    }}
                 )
             if not translated:
                 detection = translation.detect(content).lang
