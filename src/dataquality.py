@@ -49,6 +49,8 @@ for i in range(0,len(index)):
 
 #Inserts list of dicts into a pandas dataframe
 dfDictList=pd.DataFrame(dictList)
+print(dfDictList)
 print("-"*40)
 print("CSV file created")
-dfDictList.to_csv("./Generated Files/Top 100 Longest Reviews.csv")
+dfDictList.to_excel("./Generated Files/Top 100 Longest Reviews.xlsxx")
+

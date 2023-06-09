@@ -50,7 +50,7 @@ def reqListGenerator():
     #1):
         temp="NA"
         #The link is converted to a string for this conditional to make it easier to process NAs,
-        #when there is no link.
+        #when there is no link. 
         if (str(app_links_raw_data[i])!="nan"):
             tempSplit = app_links_raw_data[i].split("/")
             countryCode=tempSplit[3]             
