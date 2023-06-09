@@ -1,5 +1,5 @@
 # Emergency-Review-Scraper-and-Analysis
-A python program that uses libraries to scrape reviews off of IOS apps and then publish them to a MongoDB database.
+A python program that uses libraries to scrape reviews off of IOS & Google Play Store apps and then publish them to a MongoDB database.
 &nbsp;
 &nbsp;
 &nbsp;
@@ -15,5 +15,5 @@ A python program that uses libraries to scrape reviews off of IOS apps and then 
 
 ## Repository Table of Contents 
 #### [How to Scrape and Store IOS Reviews from Multiple Apps with Python and MongoDB](https://github.com/brandjtc/Emergency-Review-Scraper-and-Analysis/blob/main/guide/ios_scraper_guide.md)
-
+#### [How to Scrape and Store Google Play Store Reviews from Multiple Apps with Python and MongoDB](https://github.com/brandjtc/Emergency-Review-Scraper-and-Analysis/blob/main/guide/google_play_scraper_guide.md)
 
