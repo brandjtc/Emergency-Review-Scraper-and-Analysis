@@ -3,13 +3,11 @@ import re
 import os
 from google_play_scraper import app, Sort, reviews
 from pprint import pprint
-import pymongo
 from pymongo import MongoClient
 import datetime as dt
 from tzlocal import get_localzone
 import random
 import time
-import openpyxl
 import http.client
 from google_play_scraper.exceptions import NotFoundError, ExtraHTTPError
 from multiprocessing import Pool
@@ -17,7 +15,8 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
 # Read app data from Excel
-app_df = pd.read_excel(r"C:\Users\antho\OneDrive\OneDrive\EmergencyComApps\data\EmergencyComData.xlsx", sheet_name='dataset')
+excelFilePath=os.getenv("EXCELFILEPATHGOOGLE")
+app_df = pd.read_excel(excelFilePath, sheet_name='dataset')
 app_links = app_df['Link to Google Play Store'].tolist()
 app_names = list(app_df['App-Name'])
 
@@ -30,7 +29,8 @@ app_info_collection = app_proj_db[os.getenv("APPINFORMATION")]
 # Constants
 COUNT_PER_BATCH = 400  # Number of reviews to fetch per batch
 SLEEP_TIME_RANGE = (1, 5)  # Range of sleep time between batches
-NUM_OF_PROCESSES = 16
+NUM_OF_PROCESSES = 16  # Sets number of processes to 16 (Change this depending on how many cores/threads your computer has)
+RETRY_DELAY = 10  # Retry delay in seconds if the review cannot be scraped due to network inconsistencies
 
 # Function to scrape reviews for an app
 def scrape_reviews(app_info):
@@ -77,19 +77,22 @@ def scrape_reviews(app_info):
     
     try:
         while True:
-            # Fetch reviews for the app with error handling and retry logic
-            try:
-                rvws, token = reviews(
-                    app_id,
-                    lang='en',
-                    country='us',
-                    sort=Sort.NEWEST,
-                    count=COUNT_PER_BATCH if batch_num == 0 else COUNT_PER_BATCH + 1,  # Include extra review in the first batch
-                    continuation_token=token if batch_num > 0 else None
-                )
-            except http.client.IncompleteRead:
-                print(f"IncompleteRead error occurred. Retrying request for app {app_name}...")
-                continue
+            # Fetch reviews for the app with error handling and retry logic implemented
+            while True:
+                try:
+                    rvws, token = reviews(
+                        app_id,
+                        lang='en',
+                        country='us',
+                        sort=Sort.NEWEST,
+                        count=COUNT_PER_BATCH if batch_num == 0 else COUNT_PER_BATCH + 1,  # Include extra review in the first batch
+                        continuation_token=token if batch_num > 0 else None
+                    )
+                    break
+                except http.client.IncompleteRead:
+                    print(f"IncompleteRead error occurred. Retrying request for app {app_name}...")
+                    time.sleep(RETRY_DELAY)
+                    continue
             
             if not rvws:
                 break
@@ -99,6 +102,7 @@ def scrape_reviews(app_info):
                 r['app_name'] = app_name
                 r['app_id'] = app_id
                 r['platform'] = 'Google Play Store'
+                # The hardcoded platform title is to maintain a distinction between IOS App reviews and Google Play App reviews; subject to change in the future
                 
             app_reviews.extend(rvws)
             batch_num += 1
