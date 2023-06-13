@@ -1,0 +1,229 @@
+{
+    "reviews": [
+        {
+            "text": "The new update will not allow me to hold my phone in portrait, only landscape. Its super zoomed in with large (useless) picd, so really hard to read anything. What the heck happened to the single page weather warnings? That is why I have this app. Not for entertainment, only for emergencies, and you changed the interfece to be useless and annoying.",
+            "dimensions": [
+                {
+                    "title": "Transparent Interaction",
+                    "score": 20,
+                    "sub_dimensions": [
+                        {
+                            "title": "Activation",
+                            "score": 40
+                        },
+                        {
+                            "title": "Saliency",
+                            "score": 0
+                        },
+                        {
+                            "title": "Usability",
+                            "score": 20
+                        },
+                        {
+                            "title": "Deep Trust",
+                            "score": 0
+                        }
+                    ]
+                },
+                {
+                    "title": "Representational Fidelity",
+                    "score": 0,
+                    "sub_dimensions": [
+                        {
+                            "title": "Currency",
+                            "score": 0
+                        },
+                        {
+                            "title": "Completeness",
+                            "score": 0
+                        },
+                        {
+                            "title": "Exactitude",
+                            "score": 0
+                        },
+                        {
+                            "title": "Consistency",
+                            "score": 0
+                        },
+                        {
+                            "title": "Relevance",
+                            "score": 0
+                        },
+                        {
+                            "title": "Representational Trust",
+                            "score": 0
+                        }
+                    ]
+                },
+                {
+                    "title": "Situational Awareness",
+                    "score": 0,
+                    "sub_dimensions": [
+                        {
+                            "title": "Promptness",
+                            "score": 0
+                        },
+                        {
+                            "title": "Actionability",
+                            "score": 0
+                        },
+                        {
+                            "title": "Situational Trust",
+                            "score": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "I liked this app for its simplicity, directness and privacy to the end user. I will try it a bit longer but the changes aren't good.",
+            "dimensions": [
+                {
+                    "title": "Transparent Interaction",
+                    "score": 60,
+                    "sub_dimensions": [
+                        {
+                            "title": "Activation",
+                            "score": 80
+                        },
+                        {
+                            "title": "Saliency",
+                            "score": 60
+                        },
+                        {
+                            "title": "Usability",
+                            "score": 80
+                        },
+                        {
+                            "title": "Deep Trust",
+                            "score": 40
+                        }
+                    ]
+                },
+                {
+                    "title": "Representational Fidelity",
+                    "score": 0,
+                    "sub_dimensions": [
+                        {
+                            "title": "Currency",
+                            "score": 0
+                        },
+                        {
+                            "title": "Completeness",
+                            "score": 0
+                        },
+                        {
+                            "title": "Exactitude",
+                            "score": 0
+                        },
+                        {
+                            "title": "Consistency",
+                            "score": 0
+                        },
+                        {
+                            "title": "Relevance",
+                            "score": 0
+                        },
+                        {
+                            "title": "Representational Trust",
+                            "score": 0
+                        }
+                    ]
+                },
+                {
+                    "title": "Situational Awareness",
+                    "score": 0,
+                    "sub_dimensions": [
+                        {
+                            "title": "Promptness",
+                            "score": 0
+                        },
+                        {
+                            "title": "Actionability",
+                            "score": 0
+                        },
+                        {
+                            "title": "Situational Trust",
+                            "score": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "After my phone's \"Wireless Emergency Alerts\" app quit working, for no apparent reason, I was looking for an alternative. This one seems to work with all the crazy weather we have had lately (notifications are the same as NWS). My big problem is the app says notifications are sent by TEXT message. The only way I get any messages is to connect to the internet and find if a watch/warning has been sent. To me, requiring internet service is not a text. I don't have unlimited data. What am I missing?",
+            "dimensions": [
+                {
+                    "title": "Transparent Interaction",
+                    "score": 60,
+                    "sub_dimensions": [
+                        {
+                            "title": "Activation",
+                            "score": 80
+                        },
+                        {
+                            "title": "Saliency",
+                            "score": 60
+                        },
+                        {
+                            "title": "Usability",
+                            "score": 80
+                        },
+                        {
+                            "title": "Deep Trust",
+                            "score": 40
+                        }
+                    ]
+                },
+                {
+                    "title": "Representational Fidelity",
+                    "score": 60,
+                    "sub_dimensions": [
+                        {
+                            "title": "Currency",
+                            "score": 80
+                        },
+                        {
+                            "title": "Completeness",
+                            "score": 60
+                        },
+                        {
+                            "title": "Exactitude",
+                            "score": 80
+                        },
+                        {
+                            "title": "Consistency",
+                            "score": 60
+                        },
+                        {
+                            "title": "Relevance",
+                            "score": 60
+                        },
+                        {
+                            "title": "Representational Trust",
+                            "score": 60
+                        }
+                    ]
+                },
+                {
+                    "title": "Situational Awareness",
+                    "score": 60,
+                    "sub_dimensions": [
+                        {
+                            "title": "Promptness",
+                            "score": 80
+                        },
+                        {
+                            "title": "Actionability",
+                            "score": 60
+                        },
+                        {
+                            "title": "Situational Trust",
+                            "score": 60
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

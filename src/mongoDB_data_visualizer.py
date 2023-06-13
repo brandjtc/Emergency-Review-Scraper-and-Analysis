@@ -142,7 +142,7 @@ for item in data:
             pass
     
 
-#Gathers percentage of short reviews that will be excluded from final dataset
+#Gathers the percentage of short reviews. These will all be excluded from final dataset for the rest of these calculations.
 shortReviewPercent=round(shortCount/preRoundRevTotal*100,2)
 
 
@@ -174,7 +174,7 @@ reportDoc = doc()
 
 reportDoc.add_heading('Scraper Report', 0)
 reportDoc.add_heading('Summary',level=1)
-summaryString=f'''The length of the reviews varied (M={meanLength}, SD={standardDeviation}). Approximately {shortReviewPercent}% consisted of just a few words (<25 characters), Approximately {middleReviewPercent}% contained at most one sentence (<200 characters), while {largeReviewPercent}% contained multiple sentences (>201 characters). Since reviews shorter than a few words (<25 characters) likely contain trivial comments such as "{sampledShortRev[0]}", "{sampledShortRev[1]}", and "{sampledShortRev[2]}." Their content is unlikely to have the depth or breadth needed to significantly invoke any of the dimensions or sub-dimensions presented in our theoretical model. Therefore, we excluded them from the dataset. Thus, our final dataset consisted of {reviewTotal} reviews, with approximately ({playStorePercent}% being from the Google Play Store and {appStorePercent}% from the Apple AppStore).'''
+summaryString=f'''The length of the reviews varied (M={meanLength}, SD={standardDeviation}). Approximately {shortReviewPercent}% consisted of just a few words (<25 characters), Approximately {middleReviewPercent}% contained at most one sentence (<200 characters), while {largeReviewPercent}% contained multiple sentences (>201 characters). Since reviews shorter than a few words (<25 characters) likely contain trivial comments such as "{sampledShortRev[0]}", "{sampledShortRev[1]}", and "{sampledShortRev[2]}." Their content is unlikely to have the depth or breadth needed to significantly invoke any of the dimensions or sub-dimensions presented in our theoretical model. Therefore, we excluded them from the dataset. Thus, after removing {shortCount} reviews, our final dataset consisted of {reviewTotal} reviews, with approximately ({playStorePercent}% being from the Google Play Store and {appStorePercent}% from the Apple AppStore).'''
 reportDoc.add_paragraph(summaryString)
 reportDoc.add_heading('Figure 1', level=1)
 reportDoc.add_picture('./Generated Files/storeCount.png')

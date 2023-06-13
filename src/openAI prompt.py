@@ -8,27 +8,21 @@ import json
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
-#Sets openAI api key
-openai.api_key = os.environ.get("OPEN_AI_KEY")
-
 #Establishes connection to mongo DB
-client = MongoClient("mongodb+srv://Nym:0Mk0q4XEtGCxTdkr@appstorescraper.ssekhzr.mongodb.net/")
+mongoDBkey=os.getenv("MONGO_KEY")
+client = MongoClient(mongoDBkey)
 
 #Selects EmergencyReviewDB as the database in Mongo to populate
-ios_proj_db=client['EmergencyReviewDB']
+mongoDBdatabase=os.getenv("DATABASE")
+ios_proj_db=client[mongoDBdatabase]
 
-#Connects to tables in aforementioned DB
-ios_review_collection=ios_proj_db['GooglePlayReviewCollection']
+#Connects to desired collection in aforementioned DB
+mongoDBcollection=os.getenv("COLLECTION")
+review_collection = ios_proj_db[mongoDBcollection]
 
-
-#Reads excel doc using Pandas library
-ios_excel=pd.read_excel(r'C:\Users\brand\OneDrive\EmergencyComApps\data\EmergencyComData.xlsx',usecols='A,L')
-definitionJSON=pd.read_json(r'C:\Users\brand\OneDrive\EmergencyComApps\data\dimension_data.json')
-
-
-#Creates four lists, the app names, the links to the apps, empty country codes list,
-#and an empty app ID list later filled with the IOS app store IDs respectively. 
-app_name_list = list(ios_excel['App-Name'])
+#Setting open API key
+open_AI_Key=os.getenv("OPEN_AI_KEY")
+openai.api_key=(open_AI_Key)
 
 def get_completion(prompt, model="gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
@@ -39,11 +33,14 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
     )
     return response.choices[0].message["content"]
 output=list()
-review=ios_review_collection.find({"app_name":"FEMA"},{"_id":0,"content":1})
+review=review_collection.find({"app_name":"FEMA"},{"_id":0,"content":1})
 for x in review:
-    output.append(x)
+	if (x['content']!=None):
+		if(len(x['content'])>25):
+			output.append(x['content'])
+    
 
-definition= [
+definition=[
 	{
   	"Dimension": "Transparent Interaction",
   	"Definition": "Is the extent to which users can easily access and interact with the app without any obstacles.",
@@ -129,11 +126,24 @@ prompt= f"""
     ~{definition}~
     Mark your answer with the following format seperately for each review for all dimensions and subdimensions listed:
     Review Text
-    -------------------------------------
     Dimension Title,Numerical Score
     Sub-Dimension Title,Numerical Score
-    -------------------------------------
+    
+    Afterwards, convert this to a JSON file format.
+    
+    Only return the json format.
+    
     """
-print(prompt)
+print("Generating response from prompt")
 response=get_completion(prompt)
+print("Response:")
 print(response+"\n")
+
+
+
+# Specify the file path where you want to save the JSON file
+file_path = "./Generated Files/open_AI_output.json"
+
+# Write the OpenAI output to a JSON file
+with open(file_path, 'w') as json_file:
+    json.dump(json.loads(response), json_file, indent=4)
