@@ -38,7 +38,25 @@ for x in review:
 	if (x['content']!=None):
 		if(len(x['content'])>25):
 			output.append(x['content'])
+
     
+
+jsonFormat="""
+[
+{
+	"Review" : Review Text Here
+},
+{
+	Dimension Name : Score
+	"Score": Score
+	"Sub-Dimensions": [
+		{
+		Sub-Dimension Name : Score
+		}
+	]
+}
+]
+"""
 
 definition=[
 	{
@@ -115,23 +133,14 @@ definition=[
 
 #app_name_list:
 prompt= f"""
-    Review all of the app reviews below denoted with <>.\
-    Reviews:<{output[0]},{output[1]}>
-    If they are in a different language, translate them to the english language.
+    Look at the app review below denoted with <>.
+	<{output[0]}>   
 
-    
-
-    Afterwards, based on the review contents determine how strongly the app relates to the concepts and their provided definitions denoted below with ~~,
-    on a scale of 0 to 100.
+	Based on the content of the review, determine how strongly the app relates to the concepts and their provided definitions denoted below with ~~ on a scale of 0 to 100.
     ~{definition}~
-    Mark your answer with the following format seperately for each review for all dimensions and subdimensions listed:
-    Review Text
-    Dimension Title,Numerical Score
-    Sub-Dimension Title,Numerical Score
     
-    Afterwards, convert this to a JSON file format.
-    
-    Only return the json format.
+    Use the following format for your response
+    {jsonFormat}
     
     """
 print("Generating response from prompt")
@@ -143,6 +152,8 @@ print(response+"\n")
 
 # Specify the file path where you want to save the JSON file
 file_path = "./Generated Files/open_AI_output.json"
+
+#Todo: make MongoDB object id the file name.
 
 # Write the OpenAI output to a JSON file
 with open(file_path, 'w') as json_file:
