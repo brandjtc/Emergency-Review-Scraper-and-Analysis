@@ -29,16 +29,6 @@ def process_review(review):
     
     # The review has to have 2 characters at the minimum to be translated
     if content and len(content) > 2:
-        # If the translated is not set or if it *is* translated and the language is set to en
-        # This is to more so retroactively fix translated text set to en; could be changed
-        if translated is None or (translated and review.get('language') == 'en'):
-            review_collection.update_one(
-                {"_id": review['_id']},
-                {"$set": {
-                    "translated": False,
-                    "translated_content": "None"
-                }}
-            )
         if not translated:
             # A try-except to use the language detection and then process the reviews by calling translate_text
             try:
