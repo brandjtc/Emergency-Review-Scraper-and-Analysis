@@ -1,0 +1,32 @@
+{
+    "Content": "I chose the AccuWeather App after I found out that my \u201cfarmer\u201d sister showed how well it deciphers the ever changing Rocky Mountain weather.  I like the feature that allows you to see about 120 minutes ahead if there\u2019s snowfall coming and when there might be a chance to get out of the house and run an errand.  It\u2019s been pretty precise too.  The sunrise/sunset and moon phases can also be found on the main screen.  The main screen is well designed and further investigation of the site is easy to navigate through.   It gives you a weekly forecast and if you choose to do so, you can get a 15 day forecast.  I haven\u2019t found the longer range forecast to be as accurate though.  It might be unrealistic to give a 15 day forecast in our day and age.  Even with all our science and gadgets it seems too \u201cfar-out\u201d for any prediction.  Short videos are available of weather related events.  If you DON\u2019T pay the approximately $4 a month, you can\u2019t skip the commercials.  They\u2019re pretty short though - 15 seconds- which seems long when you\u2019re waiting for the video.  You can also sign up for weather alerts.  I use AccuWeather\u2019s site almost daily.",
+    "ID": "64811e1ff8a094257ab26757",
+    "Transparent Interaction": 80,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": 70,
+            "Saliency": 80,
+            "Usability": 90,
+            "Deep Trust": 70
+        }
+    ],
+    "Representational Fidelity": 80,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": 90,
+            "Completeness": 80,
+            "Exactitude": 80,
+            "Consistency": 80,
+            "Relevance": 80,
+            "Representational Trust": 70
+        }
+    ],
+    "Situational Awareness": 80,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": 80,
+            "Actionability": 80,
+            "Situational Trust": 80
+        }
+    ]
+}
