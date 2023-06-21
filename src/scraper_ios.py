@@ -16,34 +16,61 @@ _ = load_dotenv(find_dotenv())
 #Set to -1 to get all reviews from an app. Otherwise, rounds up to nearest positive multiple of 20.
 REVIEWBATCHCOUNT=-1
 SLEEP_TIME_RANGE = (1, 2)
-AUTO=False
-#MANUAL_INSERT takes precedence over AUTO
 MANUAL_INSERT=False
-TRANSLATE=True
-
+TRANSLATE=False
+#WARNING, IF SET TO TRUE, EMPTIES DATABASE
+RESET=False
 #Establishes connection to mongo DB
 mongoDBkey=os.getenv("MONGO_KEY")
 client = MongoClient(mongoDBkey)
 
 #Selects EmergencyReviewDB as the database in Mongo to populate
 mongoDBdatabase=os.getenv("DATABASE")
-ios_proj_db=client[mongoDBdatabase]
+ios_project_db=client[mongoDBdatabase]
 
 #Connects to desired collection in aforementioned DB
 mongoDBcollection=os.getenv("COLLECTION")
-review_collection = ios_proj_db[mongoDBcollection]
+review_collection = ios_project_db[mongoDBcollection]
 
 excelFilePath=os.getenv("EXCELFILEPATH")
 #Reads excel doc using Pandas library
 ios_excel=pd.read_excel(excelFilePath,usecols='A,L')
 
+if RESET==True:
+    print("Restart scraper from scratch, WIPING ALL IOS REVIEWS IN THE PROCESS?")
+    userInp=input("Y/N: ")
+    while (userInp.lower()!='y' and userInp.lower()!='n'):
+        print("Invalid user input.\n")
+        print("Restart scraper from scratch, WIPING ALL IOS REVIEWS IN THE PROCESS?")
+        userInp=input("Y/N: ")
+    if userInp.lower()=='y':
+        review_collection.delete_many({"platform":"Apple App Store"})
+        print("All IOS reviews deleted")
+    else:
+        print("Reset process stopped. Set RESET constant variable to false to prevent this popup.")
 
+
+    
 #Creates four lists, the app names, the links to the apps, empty country codes list,
 #and an empty app ID list later filled with the IOS app store IDs respectively. 
 app_name_list = list(ios_excel['App-Name'])
 app_links_raw_data = list(ios_excel['Link to App Store'])
 app_id_list=list()
 country_code_list=list()
+
+def reviewStoreWrite(reviewNum):
+    with open(os.getenv("STORFILELOC"),'w') as storeFile:
+        storeFile.write(str(reviewNum))
+
+def reviewStoreRead():
+    try:
+        with open(os.getenv("STORFILELOC"),'r') as readFile:
+            testNum=readFile.readline()
+            if testNum.isnumeric():
+                return int(testNum)
+    except FileNotFoundError:
+        pass
+    return 0
 
 def reqListGenerator():
     for i in range(0,len(app_name_list)):
@@ -57,7 +84,7 @@ def reqListGenerator():
             idSplit=tempSplit[6].split("d")
 
             #If statement checks for lingering language tag in the ID extracted from the app link. 
-            #If present, it is removed and the temp variable is adjusted accordingly to be added to the app ID list.
+            #If present, it is removed and the temp variable is adtempApp.reviews[j]usted accordingly to be added to the app ID list.
             if ("?" in idSplit[1]):
                 idSplit=idSplit[1].split("?")
                 temp=idSplit[0]
@@ -76,16 +103,17 @@ def reviewScraper(num):
 
     #Deletes all records of app inside database if Manual Insertion is set by user
     if (MANUAL_INSERT==True):
-        ios_proj_db.review_collection.delete_many({"app_name":app_name_list[num],"platform":"Apple App Store"})
+        ios_project_db.review_collection.delete_many({"app_name":app_name_list[num],"platform":"Apple App Store"})
 
     if (country_code!='NA')&(app_id!='NA'):
         #Details what app is currently being scrapped and the start time/date.
         print("Review scraping for app: "+app_name)
+        print(f"App ID: {app_id}")
+        print(f"App is number {num} on the excel document")
         fmt = "%m/%d/%y - %T %p"  
         start= dt.datetime.now(tz=get_localzone())
         print("Began at:"+start.strftime(fmt))
         #Puts the app information into the tempApp container to later generate reviews.
-        print(f"App ID: {app_id}")
         tempApp=AppStore(country_code,app_name,app_id)
         #Generates reviews using app stored in the tempApp container. Constant variables edit functionality
         # present here to alter amount of reviews grabbed.
@@ -105,43 +133,45 @@ def reviewScraper(num):
             toTranslate=True
         if lang=="break":
             print("Error response. Try Again Later.")
-        #container for future reviews
-        reviewContainer=list()
 
         #Nested for loop that converts the   library's output into one suitable
         #for the Mongo database.
-        for j in range (0,len(tempApp.reviews)):
+        reviewStartVar=reviewStoreRead()
+        for j in range(reviewStartVar,len(tempApp.reviews)):
+            #Stores index value of next review in case program is interrupted.
+            reviewStoreWrite(j)
             if (app_id!="NA")&(app_id!=""):
-                dictionaryTemp=list(tempApp.reviews[j].items())
-
-                #Empty list created to use as container for adjusted scraper output
+                #Empty list created to use as container for adtempApp.reviews[j]usted scraper output
                 tempDiction={}
 
                 #if statements intended to add flexibility to the code accounting for all possible permutations a user may want
+            
                 if TRANSLATE==True&toTranslate==True:
-                    tempDiction.update([(dictionaryTemp[4]),(dictionaryTemp[5]),
-                                    ("title",tr.translateToEng(tempApp.reviews[j]["title"])),
-                                    ("untranslated_title",tempApp.reviews[j]["title"]),
+                    tempDiction.update([("userName",tempApp.reviews[j]["userName"]),
+                                    ("title",tempApp.reviews[j]["title"]),
                                     ("content",tempApp.reviews[j]["review"]),
-                                    ("translated_content",tr.translateToEng(tempApp.reviews[j]["review"])),
                                     ("score",tempApp.reviews[j]["rating"]),("at",tempApp.reviews[j]["date"]),
                                     ("app_name",app_name),("app_id",app_id),
-                                    ("platform","Apple App Store"),("language",lang),("translated",True)])
+                                    ("platform","Apple App Store"),("language",lang),
+                                    ("translated",True),
+                                    ("translated_title",tr.translateToEng(tempApp.reviews[j]["title"])),
+                                    ("translated_content",tr.translateToEng(tempApp.reviews[j]["review"]))])
             
                 else:
-                    tempDiction.update([(dictionaryTemp[4]),(dictionaryTemp[5]),
-                                ("title",tempApp.reviews[j]["title"]),("untranslated_title",None),
-                                ("content",tempApp.reviews[j]["review"]),("translated_content",None),
-                                ("score",tempApp.reviews[j]["rating"]),("at",tempApp.reviews[j]["date"]),
-                                ("app_name",app_name),("app_id",app_id),("platform","Apple App Store"),
-                                ("language",lang),("translated",False)])
-                    
-                #Packing into container for insertion into MongoDB database
-                reviewContainer.append(tempDiction)
-        try:
-            review_collection.insert_many(reviewContainer) 
-        except TypeError:
-            print("NOTE:\nThis application has no reviews available")
+                    tempDiction.update([("userName",tempApp.reviews[j]["userName"]),
+                                ("title",tempApp.reviews[j]["title"]),
+                                ("content",tempApp.reviews[j]["review"]),
+                                ("score",tempApp.reviews[j]["rating"]),
+                                ("at",tempApp.reviews[j]["date"]),
+                                ("app_name",app_name),("app_id",app_id),
+                                ("platform","Apple App Store"),("language",lang),
+                                ("translated",False),("translated_title",None),("translated_content",None)])
+               
+                #Inserting into mongoDB database
+                print(f"Uploading Review #: {j}")
+                review_collection.insert_one(tempDiction)
+        #Sets review num back to 0 after scraping is finished.        
+        reviewStoreWrite(0)
 
         #Details end time and time elapsed.
         print("-"*40)
@@ -151,19 +181,12 @@ def reviewScraper(num):
         print("Ended at: "+end.strftime(fmtend))
         print(f"Time elapsed: {end - start}")
         print("-"*40)
-        
-        #Single insert variable for adding only a single app's reviews.
-        if (MANUAL_INSERT==False):
-            #Stores index value of the current app in case program is interrupted.
-            print(f"Storage var incremented: {num+1}")
-            storeFile= open(os.getenv("STORFILELOC"),"w+")
-            storeFile.write(str(num+1))
-            storeFile.close()
 
 #Helper function that calles review scraper function to be done for all apps in app name list.
-def reviewScraperHelper(num):
-    for i in range(num,len(app_name_list)):
-        reviewScraper(i)
+def reviewScraperHelper():
+    for i in range(0,len(app_name_list)):
+        if review_collection.find_one({'app_name':app_name_list[i],'platform':"Apple App Store"}) is None:
+            reviewScraper(i)
 
 
 if __name__ == "__main__":
@@ -174,45 +197,7 @@ if __name__ == "__main__":
     #for if user wants to manually add apps using code.
 
     if (MANUAL_INSERT==False):
-    #Automatic behavior that starts from the beginning if auto is True. Wipes all apple apps from database.
-        if (AUTO==True):
-            print("AUTO MODE ENABLED")
-            review_collection.delete_many({"platform":"Apple App Store"})
-            reviewScraperHelper(0)
-
-        #Behavior for if AUTO is set to false
-        else:
-            storageNum=0
-            checkFile = open(os.getenv("STORFILELOC"),"r")
-            testNum=checkFile.readline()
-            if testNum.isalnum():
-                storageNum=int(testNum)   
-            checkFile.close()
-            #checks if storageNum has been incremented.
-            if storageNum!=0:
-                #If it does, sets the number stored inside as the index of which app to start
-                # review scraping from if user chooses to with a y/n prompt.
-                userInput=input((f"If you want to run the scraper starting from app {app_name_list[storageNum]}, type 'y'\nIf you want to run the scraper from beginning and delete all current entries, type 'n'\ny/n: "))
-
-                #Input validation while loop.
-                while (userInput.lower()!="y")&(userInput.lower()!="n"):
-                    print("Incorrect formatting")
-                    userInput=input((f"If you want to run the scraper starting from app {app_name_list[storageNum]}, type 'y'\nIf you want to run the scraper from beginning and delete all current entries, type 'n'\ny/n: "))
-                
-                #For if user chooses yes.
-                if (userInput.lower()=='y'):
-                    print("Preparing for insertion into MongoDB")
-                    delList=list()
-                    for i in range(storageNum,len(app_name_list)):
-                        review_collection.delete_many({"app_name":app_name_list[i],"platform":"Apple App Store"})
-                    reviewScraperHelper(storageNum)
-                #For if user chooses no.
-                else:
-                    review_collection.delete_many({"platform":"Apple App Store"})
-                    reviewScraperHelper(0)
-            #For if file is empty.
-            else:
-                print("FILE EMPTY OR SET TO 0. AUTO MODE ENABLED")
-                review_collection.delete_many({"platform":"Apple App Store"})
-                reviewScraperHelper(0)
+        reviewScraperHelper()
+    elif (MANUAL_INSERT==True):
+        reviewScraper("App Name Here")
     client.close()
