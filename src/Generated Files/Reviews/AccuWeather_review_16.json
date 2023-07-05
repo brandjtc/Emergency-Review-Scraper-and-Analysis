@@ -1,0 +1,35 @@
+{
+    "Content": "Sad to write this. I was a TWC user years ago but they got silly so I switched to AccuWeather. Been using it ever since. Lately there have been new changes that are not ok. A new graph setup which just sucks compared the standard list style from before, and the ads are absolutely out of hand. If I want to view ANY tab except for home I get a full screen ad. Old features are locked behind a pay wall now. Basic mode gives you ads and less features than premium? I'm switching apps.",
+    "ID": "'648852cb4f0598f2c2b4fc9a'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

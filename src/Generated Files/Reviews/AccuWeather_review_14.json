@@ -1,0 +1,35 @@
+{
+    "Content": "I loved this app until the recent updates. I do not like the changes at all. I had everything set perfectly for the past few years. Now I have to hit \"list\" every time I open the app. There used to be a setting that made it my permanent choice. I view weather a few times daily, sometimes. I also do not like the visual. The type and graphics seem less bold.",
+    "ID": "'648852cb4f0598f2c2b4fc93'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "Content": "It used to be THE weather app. It was always accurate and gave notices when it was going to rain. It hasn't done that in the past year and has gradually gotten worse. This past Saturday the radar was showing that it was raining where we were at but not a drop was falling. Worse is it doesn't update or anything ever since they started to push their paid subscription more. If the free app doesn't work what makes you think I would pay for a subscription that won't give a refund?",
+    "ID": "'648852cb4f0598f2c2b4fc63'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

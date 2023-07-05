@@ -1,0 +1,35 @@
+{
+    "Content": "Latest update blocked out the hourly temperature after 12 hours with the ad to buy their plan. So just not the full page ad now some functionality loss. Now it's either full page ads or a recurring $9 a year charge for a phone app. Both of which are annoying and unacceptable. This was one of my favorite apps but I don't like what you did there, AccuWeather. There also was an initial problem after the update of the weather data loading too. Restarting the phone seemed to fix that issue.",
+    "ID": "'648852cb4f0598f2c2b4fca2'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "Content": "For a few weeks it went downhill, asking for a monthly fee, playing music in the background. These particular things have not bothered me in about a month or so; so they must have changed some things back after poor reviews. This is my favorite app and whereas I understand certain features should be paid for I appreciate the changes made.",
+    "ID": "'648852cb4f0598f2c2b4fc72'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

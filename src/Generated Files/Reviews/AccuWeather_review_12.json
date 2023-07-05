@@ -1,0 +1,35 @@
+{
+    "Content": "I hate this app now.. only crashes your phone... doesn't work.. Going from bad to worse.. Crashes ALL THE TIME.. Absolutely angry and frustrated. This POS of an app throws up their damn adds from unverified third party scammers. You barely touch that screen anywhere other than a tiny closing tab and it auto loads some snooping shopping app that wants to peak at all your data and notifications. This used to be a trustworthy weather app. They've sold out to con artists. Don't bother.",
+    "ID": "'648852cb4f0598f2c2b4fc8e'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "Content": "Wow, what the !*#! happened to the user interface? I was between phones for about a week and you appear to have pushed an update to the interface design during that time and this new version is really, really bad, like \"I fear I'll have to stop using this app\" bad. Your previous design was much more intuitive and visually appealing. What you've got going on now definitely looks like an undergraduate's 3rd-year design project. Probs better to bring back the prior design, yes?",
+    "ID": "'648852cb4f0598f2c2b4fc5e'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

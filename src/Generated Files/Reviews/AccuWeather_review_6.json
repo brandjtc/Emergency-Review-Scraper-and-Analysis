@@ -1,0 +1,35 @@
+{
+    "Content": "I love the layout, it looks great and it's easy to read. But, unfortunately, this app has gotten more inaccurate every year to the point that I have to switch now. Also, being an early premium buyer doesn't mean anything now bc they are pushing for a subscription... To weather... Switched to a much more accurate app, but it looks terrible in comparison... But, I need accuracy for my job, and this isn't accurate anymore. Not even close.",
+    "ID": "'648852cb4f0598f2c2b4fc6a'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": true,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

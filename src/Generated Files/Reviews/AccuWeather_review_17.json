@@ -1,0 +1,35 @@
+{
+    "Content": "Crashes. Android suggested clear cache and then the next time it said it had a bug. Checked and an update was available. Ah, ok. Install the update and it's still crashing. Uninstall and reinstall. Same. Opens ok, albeit, slower than usual prior to the update. I get the take the new tour part. Main screen is ok. But then attempts to go to hourly or daily and it has a pause and then a crash. The crashing has resolved but Premium Plus for content that was formerly available to Premium is greed.",
+    "ID": "'648852cb4f0598f2c2b4fc9b'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

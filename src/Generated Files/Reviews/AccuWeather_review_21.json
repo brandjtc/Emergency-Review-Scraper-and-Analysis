@@ -1,0 +1,35 @@
+{
+    "Content": "Yep, time to uninstall and not look back. I had used this app for years. The ads had already gotten bad in their attempt at a money-grab to make you subscribe to a monthly or annual charge. Now with recent update, no longer can most features be used without subscription. So many other better weather apps out there to choose from. At least WTForcast offers humor in their paid version that is worth the small initial fee, and a better widget and interface. Thank you greedy developers.",
+    "ID": "'648852cb4f0598f2c2b4fca5'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

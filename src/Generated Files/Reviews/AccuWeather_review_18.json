@@ -1,0 +1,35 @@
+{
+    "Content": "I echo all other recent reviews. As an app that I have already paid for the premium features, the feature set has been drastically reduced and requires a monthly subscription. You can now only see hourly projections up to 12 hrs. Essentially every other hourly or short term accuracy based feature has been eliminated. The 4 hour outlook is still available, but has limited used. It is essentially a fake app now that you have to subscribe to. Deleting this app for good.",
+    "ID": "'648852cb4f0598f2c2b4fc9c'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

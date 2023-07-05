@@ -1,0 +1,35 @@
+{
+    "Content": "Years ago, I paid for the \u201cPremium\u201d version.  One one-time payment was supposed to indefinitely get me an ad-free experience using this app, with all the top-of-the line features.  Now, I'm getting ads, and features are being stripped away, unless I subscribe to an ongoing $2/month or $20/year plan.  This amounts to fraud, as I am now being deprived of features that I paid for.",
+    "ID": "'648852cb4f0598f2c2b4fc97'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Activation",
+    "Strongest Sub-Dimension Definition": "The app's ability to quickly alert users when they receive an emergency notification.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": false,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

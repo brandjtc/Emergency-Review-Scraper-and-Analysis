@@ -1,0 +1,35 @@
+{
+    "Content": "On the Notification Bar when you touch the temp, it now goes to an extremely annoying, irritating minute cast, and you have to hit back arrow to get to regular temp and weather info screen. It is driving me nuts. I've tried to turn it off, but can't. Why do you think you need to keep changing the interface of your app? It's perfect the way it is. AccuWeather is the best weather app I've ever had, but you make some extremely bad decisions, when making changes to your basic operation of the App.",
+    "ID": "'648852cb4f0598f2c2b4fc5c'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": false,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}

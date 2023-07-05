@@ -1,0 +1,35 @@
+{
+    "Content": "I like the updates. As part of the beta program, I understood that things were in developing/testing stages and assumed there would be big changes. I'll say that it is quite different and took some getting used to. Once I trained my brain to know where everything is, I'm rather enjoying it. I like the main screen, has all the basic info, including allergens, which is helpful living in FL. The weekly forecast is nice and I enjoy the extended radar, as well as the options for satellites, etc.",
+    "ID": "'648852cb4f0598f2c2b4fc5d'",
+    "App Name": "AccuWeather: Weather Alerts & Live Storm Radar",
+    "Strongest Sub-Dimension": "Usability",
+    "Strongest Sub-Dimension Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it.",
+    "Transparent Interaction": true,
+    "Transparent Interaction Sub-Dimensions": [
+        {
+            "Activation": false,
+            "Saliency": false,
+            "Usability": true,
+            "Deep Trust": false
+        }
+    ],
+    "Representational Fidelity": false,
+    "Representational Fidelity Sub-Dimensions": [
+        {
+            "Currency": false,
+            "Completeness": false,
+            "Exactitude": false,
+            "Consistency": false,
+            "Relevance": false,
+            "Representational Trust": false
+        }
+    ],
+    "Situational Awareness": false,
+    "Situational Awareness Sub-Dimensions": [
+        {
+            "Promptness": false,
+            "Actionability": false,
+            "Situational Trust": false
+        }
+    ]
+}
