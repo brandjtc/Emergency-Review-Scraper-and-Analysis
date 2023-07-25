@@ -85,7 +85,7 @@ def reviewStoreRead(SINGLEINPUT,filepath,RESET):
 			reviewStore=open(filepath,"r")
 			testNum=reviewStore.readline()
 			if testNum.isnumeric():
-				retVal=int(testNum)
+				return int(testNum)
 			reviewStore.close()
 		except FileNotFoundError:
 			pass
@@ -103,7 +103,10 @@ def fileGeneration(response_json,reviewNum,app_name,filepath):
 		else:
 			nonAlNumIndex=y
 			break
-
+	if filepath=="./Generated Files/Storage_BR/":
+		filepath="./Generated Files/Reviews_BR/"
+	else:
+		filepath="./Generated Files/Reviews_AP"
 	if nonAlNumIndex!=-1:
 		#Stops app name at non-alphanumeric character to ensure file name is possible
 		app_name=app_name[0:int(nonAlNumIndex)]

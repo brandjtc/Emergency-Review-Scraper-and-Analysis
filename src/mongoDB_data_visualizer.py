@@ -9,7 +9,7 @@ from tzlocal import get_localzone
 from docx import Document as doc
 import random
 import time
-import openAI_prompt as Jarvis
+import openAI_main as Jarvis
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 

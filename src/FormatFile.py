@@ -4,23 +4,19 @@ def retPrompt(reviewStr):
 #functionality across the board for all OpenAI related scripts.
     prompt = f"""
             
-            Read the app review below denoted with <>.
+            Read the app review below denoted within <>.
             <{reviewStr}>
             
-			Based on the content of the review, determine if the concepts denoted below with ~~ are present in
-            the review. The definitions, denoted with ~~, are composed of a hierarchical list of primary dimensions, 
-            each followed by a subservient list of sub-dimensions.
+			Using the below definitions of constructs, denoted within ~~, 
+            determine if any of the constructs is mentioned within the review.
             ~{definition}~
 
-            For each of the dimensions and their sub dimensions, if they are present within the review, give a score of true.
-            If they are NOT present within the review, give a score of false.
+            If any of the constructs are mentioned within the review, regardless of their sentiment, assign to that construct a score of true.
+            If a construct is not mentioned within the review, assign to that construct a score of false.
             
             
             Use the following json file format for your response:
             {jsonFormat}		
-
-            Fill in the "Strongest Sub-Dimension" schema with the sub-dimension that is mentioned first in the review denoted with <>.
-            Fill in the "Strongest Sub-Dimension Definition" schema with the corresponding defintion.
 
             Return only the json format.
             """
@@ -31,13 +27,12 @@ jsonFormat="""
 	"Content" : "empty",
 	"ID" : "empty",
 	"App Name" : "empty",
-	"Strongest Sub-Dimension": Sub-Dimension Here,
-	"Strongest Sub-Dimension Definition" : Sub-Dimension Definition Here,
 	"Transparent Interaction" : True/False,
 	"Transparent Interaction Sub-Dimensions" : [
 	{
 		"Activation" : True/False,
     	"Saliency" : True/False,
+        "Autonomy" : True/False,
 		"Usability" : True/False,
 		"Deep Trust" : True/False
     }
@@ -72,23 +67,27 @@ jsonFormat="""
 definition=[
 	{
   	"Dimension": "Transparent Interaction",
-  	"Definition": "Is the extent to which users can easily access and interact with the app without any obstacles.",
-  	"Sub-Dimensions": [
+  	"Definition": "The extent to which users can easily access and interact with the app without any obstacles.",
+  	"Sub-Dimensions of Transparent Interaction": [
     	{
       	"Sub-Dimension": "Activation",
-      	"Definition": "The app's ability to quickly alert users when they receive an emergency notification."
+      	"Definition": "the affordance to put the user in a state of alert within a useful timeframe upon receiving an emergency notification"
     	},
     	{
       	"Sub-Dimension": "Saliency",
-      	"Definition": "The app's ability to alert users based on the type and severity of the emergency."
+      	"Definition": "the affordance to put the user in a state of alert that is congruent with the type of emergency and its severity."
     	},
+        {
+          "Sub-Dimension": "Autononmy",
+          "Definition" : "is the affordance minimize the user’s intervention when configuring the apps by means of effective default settings upon installation"
+		},
     	{	
       	"Sub-Dimension": "Usability",
-      	"Definition": "The app is ease to use, accessible, and respond quickly when the users interacts with it."
+      	"Definition": "is the affordance to enable the user to interact with the app easily"
     	},
     	{
       	"Sub-Dimension": "Deep Trust",
-      	"Definition": "Users' confidence in the app's underlying structure, such as its codebase, ensuring no privacy violations or tracking."
+      	"Definition": "is the affordance to increase the user’s level of confidence that the application is designed to support only its intended use."
     	}
   	]
 	},
@@ -98,29 +97,29 @@ definition=[
   	"Sub-Dimensions": [
     	{
       	"Sub-Dimension": "Currency",
-      	"Definition": "Providing users with up-to-date information about emergencies and the actions to take."
+      	"Definition": "is the affordance to provide the user with up-to-date representations of the emergency and counteractions to take"
     	},
     	{
       	"Sub-Dimension": "Completeness",
-      	"Definition": "Ensuring users have a comprehensive representation of emergencies and the necessary counteractions."
-    	},
+      	"Definition": "is the affordance to provide a user with a comprehensive representation of the emergency and the counteractions to take"
+		},
     	{
       	"Sub-Dimension": "Exactitude",
-      	"Definition": "Delivering correct and precise information about emergencies and the corresponding actions to take."
+      	"Definition": "is the affordance to provide a user with a correct and precise representation of an emergency and adequate counteractions to cope with it."
     	},
     	{
       	"Sub-Dimension": "Consistency",
-      	"Definition": "Maintaining coherence in the representations of emergencies and the recommended counteractions."
+      	"Definition": "is the affordance to provide users with coherent and unequivocal representations of an emergency and the counteractions to take."
     	},
     	{
       	"Sub-Dimension": "Relevance",
-      	"Definition": "Providing users with representations of non-trivial emergencies that pose immediate threats."
+      	"Definition": "is the affordance to provide users with representations of an emergency that is non-trivial or poses an immediate threat."
     	},
     	{
       	"Sub-Dimension": "Representational Trust",
-      	"Definition": "Building users' confidence in the accuracy of representations and the effectiveness of the suggested counteractions."
+      	"Definition": "is the affordance to increase the user’s level of confidence that representations of an emergency are accurate and that suggested counteractions will be effective"
     	}
-  	]
+  	]	
 	},
 	{
   	"Dimension": "Situational Awareness",
@@ -128,15 +127,15 @@ definition=[
   	"Sub-Dimensions": [
     	{
       	"Sub-Dimension": "Promptness",
-      	"Definition": "Enabling users to quickly take protective actions based on the provided information."
+      	"Definition": "is the affordance to enable a suer to quickly take protective actions."
     	},
     	{
       	"Sub-Dimension": "Actionability",
-      	"Definition": "Offering users actionable recommendations to respond to emergencies in their environment."
+      	"Definition": "is the affordance to provide a user with recommendations for actions they can enact in their environment."
     	},
     	{
       	"Sub-Dimension": "Situational Trust",
-      	"Definition": "Instilling in users the belief that they can effectively carry out projected actions by relying on the information from the emergency notification."
+      	"Definition": "is the affordance to increase the user’s level of confidence in their ability to carry out projected actions effectively by leveraging information in the emergency notification."
     	}
   	]
 	}
