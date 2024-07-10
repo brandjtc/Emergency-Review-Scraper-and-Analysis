@@ -1,0 +1,1 @@
+For Bertopic Supervised Classification. Includes blocks for training a model and also for loading a trained model. Some aspects, such as project IDs and API keys, are obfuscated, meaning the code will not work as is unless your own keys and IDs are provided.
