@@ -18,8 +18,8 @@ A python program that uses libraries to scrape reviews off of IOS & Google Play 
 #### [How to Scrape and Store Google Play Store Reviews from Multiple Apps with Python and MongoDB](https://github.com/brandjtc/Emergency-Review-Scraper-and-Analysis/blob/main/guide/google_play_scraper_guide.md)
 #### [Open AI Analysis Example Outputs](https://github.com/brandjtc/Emergency-Review-Scraper-and-Analysis/tree/main/src/Generated%20Files/Reviews)
 
-New Addition: Semantic Similarity Analysis
-semanticSimilarity.ipynb
+# New Addition: Semantic Similarity Analysis
+### semanticSimilarity.ipynb
 
 This Jupyter notebook is designed to calculate semantic similarity between different sets of text data, using pre-trained BERT models and Sentence Transformers. The key features of the notebook include:
 
